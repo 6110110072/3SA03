@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import CharacterCard from "./CharacterCard";
 import _, { attempt } from "lodash";
 
+var temp = 0;
+var answer = "(When you try 3 attempted)";
 const prepareStateFromWord = (given_word) => {
   let word = given_word.toUpperCase();
   let chars = _.shuffle(Array.from(word));
   return {
     word,
     chars,
-    attempt: 1,
+    attempt: 0,
     guess: "",
     completed: false,
   };
@@ -21,25 +23,27 @@ export default function WordCard(props) {
     console.log(`${c} has been activated.`);
     let guess = state.guess + c;
     setState({ ...state, guess });
+
     if (guess.length == state.word.length) {
       if (guess == state.word) {
-        console.log("yeah!");
-
-         setState({ ...state, guess: "", completed: true });
+        // console.log("yeah!");
+        alertWin();
+        setState({ ...state, guess: "", completed: true });
         window.location.reload(false);
       } else {
-        console.log("reset");
+        // console.log("reset");
+        alert("try agian!");
 
-         setState({ ...state, guess: "", attempt: state.attempt + 1 });
-        window.location.reload(false);
+        setState({ ...state, guess: "", attempt: state.attempt+1});
       }
     }
-  };
 
-  //   <CharacterCard value={c} key={i} activationHandler={activationHandler} />;
+  };
 
   return (
     <div>
+
+
       {state.chars.map((c, i) => (
         <CharacterCard
           value={c}
@@ -52,3 +56,18 @@ export default function WordCard(props) {
   );
 }
 
+function alertWin() {
+  var x = Math.floor(Math.random() * 4);
+  if (x == 0) {
+    alert("AWESOME !!");
+  }
+  if (x == 1) {
+    alert("YOU ARE KING OF FRUIT !");
+  }
+  if (x == 2) {
+    alert("EASY LIKE A BANANA");
+  }
+  if (x == 3) {
+    alert("Well done !");
+  }
+}

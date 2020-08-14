@@ -8,6 +8,7 @@ export default function CharacterCard(props) {
       setActive(true);
       props.activationHandler(props.value);
     }
+    
   };
 
   useEffect(() => {
@@ -21,6 +22,8 @@ export default function CharacterCard(props) {
   return (
     <div className={className} onClick={activate}>
       {props.value}
+      
     </div>
+    
   );
 }

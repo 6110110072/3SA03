@@ -5,9 +5,10 @@ import WordCard from "./WordCard";
 
 var word = "";
 var text = "";
-var x = Math.floor(Math.random() * 5);
 
-switch (x) {
+var rand = Math.floor(Math.random() * 5);
+
+switch (rand) {
   case 0:
     text = "How to call \"ส้มโอ\" in English ?";
     word = "Grapefruit";
@@ -33,14 +34,16 @@ switch (x) {
 function App() {
   return (
     <body>
+        
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <h1>{text}</h1>
       <br></br>
       <br></br>
       <br></br>
-      <div class = 'cardlayount'>
+      <div class = 'cardlayout'>
         <WordCard value={word} />
       </div>
+      
     </body>
   );
 }
