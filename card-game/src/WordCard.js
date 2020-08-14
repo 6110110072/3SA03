@@ -35,7 +35,7 @@ export default function WordCard(props) {
         alert("try agian!");
 
         state.attempt += 1;
-        setState({ ...state, guess: "", attempt: state.attempt+1});
+        setState({ ...state, guess: "", attempt: state.attempt});
       }
     }
     temp = state.attempt;
