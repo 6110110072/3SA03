@@ -39,13 +39,14 @@ export default function WordCard(props) {
       }
     }
     temp = state.attempt;
-
+    if(temp >= 3)
+        answer = props.value;
   };
 
   return (
     <div>
         <div class = 'cardlayout'>Attempt : {temp}<br></br><br></br></div>
-
+        <div class = 'cardlayout'>Answer : {answer}<br></br><br></br></div>
 
       {state.chars.map((c, i) => (
         <CharacterCard
