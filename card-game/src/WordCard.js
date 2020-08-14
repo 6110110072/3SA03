@@ -34,14 +34,17 @@ export default function WordCard(props) {
         // console.log("reset");
         alert("try agian!");
 
+        state.attempt += 1;
         setState({ ...state, guess: "", attempt: state.attempt+1});
       }
     }
+    temp = state.attempt;
 
   };
 
   return (
     <div>
+        <div class = 'cardlayout'>Attempt : {temp}<br></br><br></br></div>
 
 
       {state.chars.map((c, i) => (
