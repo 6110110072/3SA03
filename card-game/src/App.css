@@ -1,23 +1,31 @@
+body{
+    background-image: url("93600.jpg");
+}
+
 .card {
-    display: inline-block;
-    text-align: center;
-    width: 2em;
-    font-size: 2em;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 0.5em;
-    user-select: none;
-   }
-   
-.cardlayout{
-    text-align: center;
+  display: inline-block;
+  text-align: center;
+  width: 2em;
+  font-size: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0.5em;
+  user-select: none;
+}
+
+
+.cardlayout {
+  text-align: center;
+}
+
+.AttemptAndAnswer {
+  text-align: center;
 }
 
 .activeCard {
-    color: red;
-    background: pink;
-   }
-
-h1{
-    text-align: center;
+  color: red;
+  background: pink;
 }
-   
+
+h1 {
+  text-align: center;
+}
