@@ -1,31 +1,38 @@
-body{
-    background-image: url("93600.jpg");
+body {
+  background-image: url("93600.jpg");
 }
 
 .card {
+    background-image: url("93600.jpg");
   display: inline-block;
   text-align: center;
-  width: 2em;
-  font-size: 2em;
+  width: 2.2em;
+  font-size: 2.2em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 0.5em;
   user-select: none;
 }
 
-
 .cardlayout {
+    
+  font-size: 15px;
+  font-family: "Lucida Console", Courier, monospace;
   text-align: center;
 }
 
 .AttemptAndAnswer {
+  font-size: 22px;
+  font-family: "Lucida Console", Courier, monospace;
   text-align: center;
 }
 
 .activeCard {
-  color: red;
-  background: pink;
+  color: rgb(245, 131, 65);
+  background: rgb(145, 247, 162);
 }
 
 h1 {
+    font-size: 50px;
+  font-family: "Lucida Console", Courier, monospace;
   text-align: center;
 }
